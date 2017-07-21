@@ -87,6 +87,63 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
 
 <button type="button" onclick="sendData()">Invia SMS</button>
 <div id="sendStat"></div>
+	
+	
+
+	
+	
+	
+	
+	
+	
+            <script type="text/javascript">
+              
+     
+              
+            $(document).ready(function() {
+              
+              var SDK=lpTag.agentSDK;
+              SDK.init();
+              
+          
+                
+                var onSuccess1 = function(data) {
+                // Do something with the returning data
+                var elem=document.getElementById("to");
+                elem.value=data;
+                };
+                
+                var onError1 = function(data) {
+                // Do something with the returning data
+                var elem=document.getElementById("to");
+                elem.value="null";
+                };
+                
+ 
+               
+             
+                SDK.get('surveyQuestions.preChat.name.value', onSuccess1, onError1);
+   
+        
+      </script>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 <script>
 var AccountSid  = "ACb5fb3257bf67189507a00c1f95caa7d7";
 var AuthToken = "430582dc56a920e9875d54affbf5901d"; 
