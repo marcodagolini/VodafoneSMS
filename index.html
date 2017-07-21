@@ -106,7 +106,7 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
               var SDK=lpTag.agentSDK;
               SDK.init();
               
-          
+          var Time = setTimeout(function(){  
                 
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
@@ -124,14 +124,14 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
                
              
                 SDK.get('surveyQuestions.preChat.phone.value', onSuccess1, onError1);
-	    }
+		  
+	}, 1000);
+	   
+	  
+}
    
         
       </script>	
-	
-	
-	
-	
 	
 	
 	
