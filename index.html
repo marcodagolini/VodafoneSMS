@@ -81,7 +81,7 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
 
 <br>
 
-<button type="button" onclick="sendData()">Send data</button>
+<button type="button" onclick="sendData()">Invia SMS</button>
 <div id="sendStat"></div>
 <script>
 var AccountSid  = "ACb5fb3257bf67189507a00c1f95caa7d7";
@@ -99,7 +99,7 @@ var readyToSend = true;
 }
 else{
 console.log ("error");
-document.getElementById("sendStat").innerHTML = "Fill in the fields!!";
+document.getElementById("sendStat").innerHTML = "Completa i campi!!";
 document.getElementById("sendStat").style = "color : red";
 }
 if (readyToSend === true){
@@ -112,11 +112,11 @@ console.log("sending message..");
 request.onreadystatechange = function () {
   if (request.readyState === 4) {
       console.log(request.responseText);
-	  document.getElementById("sendStat").innerHTML = "Message Sent"
+	  document.getElementById("sendStat").innerHTML = "SMS inviato"
 	  document.getElementById("sendStat").style = "color : green";
    }
 if (this.readyState == 4 && this.status == 400){
-document.getElementById("sendStat").innerHTML = "Failed to send";
+document.getElementById("sendStat").innerHTML = "Errore";
 document.getElementById("sendStat").style = "color : red";
 }
 };
