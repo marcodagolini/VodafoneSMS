@@ -74,6 +74,7 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
 
 <div id="title">Vodafone SMS Sender</div><br>
 <div id="text">Invia a: (without +)</div>
+<input id="prefisso" value="39" type="tel"><br><br>
 <input id="to" type="tel"><br><br>
 <div id="text">Messaggio</div>
 <textarea id="msgbody"></textarea><br>
@@ -88,7 +89,7 @@ var AuthToken = "430582dc56a920e9875d54affbf5901d";
 var source = "%2B18447224192";
 function sendData() {
 var readyToSend = false;
-var destination = document.getElementById("to").value;
+var destination = document.getElementById("prefisso").value + document.getElementById("to").value;
 var messageBody = document.getElementById("msgbody").value;
 var authorizationBasic = window.btoa(AccountSid + ':' + AuthToken);
 var request = new XMLHttpRequest();
